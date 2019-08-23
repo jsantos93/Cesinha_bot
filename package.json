@@ -1,0 +1,23 @@
+{
+  "name": "cesinha_bot",
+  "version": "1.0.0",
+  "description": "Bot that ...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsantos93/Cesinha_bot.git"
+  },
+  "author": "Jonathan Santos and Arthur Reis ( REISO )",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsantos93/Cesinha_bot/issues"
+  },
+  "homepage": "https://github.com/jsantos93/Cesinha_bot#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "slackbots": "^1.2.0"
+  }
+}
