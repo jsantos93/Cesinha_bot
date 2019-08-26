@@ -1,8 +1,10 @@
 const SlackBot = require('slackbots');
 const axios = require('axios');
 
+// 
 const bot = new SlackBot({
-  token: 'xoxb-724695465043-724699644722-LinCAuDlYOoNN13hKhtvzDJP',
+  // * lembrar de nao subir o token
+  token: '',  // * pegar o token separado  
   name: 'cesinhabot'
 });
 
@@ -17,3 +19,19 @@ bot.on('start', () => {
 
 // Error Handler
 bot.on('error', err => console.log(err));
+
+// começou a bugar e eu to com sono
+// TODO: arrumar esse erro bizonho
+// Message Handler
+bot.on("message", data => {
+  if (message == "Novo horario" || message == "Novo horário") {
+    bot.postMessageToChannel(data.channel, 'Aulas de segunda: ')
+
+    bot.on('message', data => {
+      const Segunda = data.text.split(' e ')
+      console.log(Segunda)
+    })
+  }  
+
+})
+
