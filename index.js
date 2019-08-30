@@ -1,7 +1,8 @@
 const SlackBot = require('slackbots');
 const axios = require('axios');
+// const fs = require('fs')
 
-// 
+
 const bot = new SlackBot({
   // * lembrar de nao subir o token
   token: '',  // * pegar o token separado  
@@ -20,18 +21,25 @@ bot.on('start', () => {
 // Error Handler
 bot.on('error', err => console.log(err));
 
-// começou a bugar e eu to com sono
+// cria o modelo de json do horario
+let horario = {
+  Canal: "",
+  Segunda: [],
+  Terca: [],
+  Quarta: [],
+  Quinta: [],
+  Sexta: []
+}
+
 // TODO: arrumar esse erro bizonho
 // Message Handler
 bot.on("message", data => {
-  if (message == "Novo horario" || message == "Novo horário") {
-    bot.postMessageToChannel(data.channel, 'Aulas de segunda: ')
-
-    bot.on('message', data => {
-      const Segunda = data.text.split(' e ')
-      console.log(Segunda)
-    })
-  }  
+  
+  if (data.text.includes("Segunda")) {
+    data.text.replace("Segunda:", "")
+    const aulas = data.text.split(",")
+    horario.Segunda = aulas
+  }
 
 })
 
