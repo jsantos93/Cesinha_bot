@@ -2,4 +2,4 @@
 
 Bot feito para lembrar das aulas no dia
 
-Rodar: ```npm run bot```
+Rodar: `npm run bot`
